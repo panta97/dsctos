@@ -1,22 +1,22 @@
 <section>
   <div class="card">
     <div class="card-header">
-      <h2>Here the input goes</h2>
+      <h2>Dsctos</h2>
 
       <div class="normal-prize">
 
-      <form class="vd-form">
-        <div class="form-row">
-          <div class="col-6">
-            <input [style.focus]="!descripcion.value" autocomplete="off" type="text" class="form-control" placeholder="Descripción" required
-              name="descripcion">
+        <form class="vd-form">
+          <div class="form-row">
+            <div class="col-12">
+              <input autocomplete="off" type="text" class="form-control" placeholder="Precio Normal"
+                [(ngModel)]="precioNormal" (keyup)="calcularDsctos(precioNormal)" name="something">
+            </div>
+            <!-- <div class="col-auto">
+            <button type="submit" class="btn btn-outline-danger " [disabled]="!vdForm.valid">Eliminar</button>
+          </div> -->
           </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary" [disabled]="!vdForm.valid">Eliminar</button>
-          </div>
-        </div>
-      </form>
-      
+        </form>
+
       </div>
 
 
@@ -27,18 +27,23 @@
         <thead>
           <tr>
             <th scope="col">
-              <span class="table-title">Descuento</span>     
+              <span class="table-title">Porcentaje</span>
+            </th>
+            <th scope="col" class="table-success">
+              <span class="table-title">Descuento</span>
             </th>
             <th scope="col">
-              <span class="table-title">Aplica para</span>     
+              <span class="table-title">Aplica para</span>
             </th>
+
           </tr>
         </thead>
         <!-- <tbody *ngFor="let vd of (vds | async); let i = index" [attr.data-index]="i"> -->
-        <tbody>
+        <tbody *ngFor="let tabla of tablas">
           <tr>
-            <td scope="row">99</td>
-            <td>zapatillas, mochilas, etc</td>
+            <td scope="row">{{tabla.porcentaje | percent : '1.0'}}</td>
+            <td scope="row" >{{tabla.aplicado | number : '1.2-2'}}</td>
+            <td>{{tabla.afectados}}</td>
           </tr>
         </tbody>
 

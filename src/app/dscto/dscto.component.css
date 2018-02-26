@@ -3,7 +3,28 @@ section {
 }
 
 .normal-prize{
-  width: 90%;
-  padding: 0 auto;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type='text']
+{
+    font-size: 160%;
+    width: 100%;
+    text-align: center;
+}
+
+th:first-child,
+th:nth-child(2){
+  width: 20%;
+}
+
+td {
+  padding: 5px;
+}
+
+th, td {
+  font-size: 160%;
   text-align: center;
 }
