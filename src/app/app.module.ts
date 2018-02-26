@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DsctoComponent } from './dscto/dscto.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    DsctoComponent
+],
   imports: [
     BrowserModule
   ],

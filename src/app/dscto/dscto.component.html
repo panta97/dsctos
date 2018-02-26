@@ -1,0 +1,48 @@
+<section>
+  <div class="card">
+    <div class="card-header">
+      <h2>Here the input goes</h2>
+
+      <div class="normal-prize">
+
+      <form class="vd-form">
+        <div class="form-row">
+          <div class="col-6">
+            <input [style.focus]="!descripcion.value" autocomplete="off" type="text" class="form-control" placeholder="Descripción" required
+              name="descripcion">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary" [disabled]="!vdForm.valid">Eliminar</button>
+          </div>
+        </div>
+      </form>
+      
+      </div>
+
+
+
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">
+              <span class="table-title">Descuento</span>     
+            </th>
+            <th scope="col">
+              <span class="table-title">Aplica para</span>     
+            </th>
+          </tr>
+        </thead>
+        <!-- <tbody *ngFor="let vd of (vds | async); let i = index" [attr.data-index]="i"> -->
+        <tbody>
+          <tr>
+            <td scope="row">99</td>
+            <td>zapatillas, mochilas, etc</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</section>
